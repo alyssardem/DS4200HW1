@@ -1,14 +1,4 @@
-const myImage = document.querySelector("img");
-
-myImage.onclick = () => {
-  const mySrc = myImage.getAttribute("src");
-  if (mySrc === "C:\Users\ardem\OneDrive\Documents\Y3 S2\DS 4200\hw1\images\cat.jpg") {
-    myImage.setAttribute("src", "C:\Users\ardem\OneDrive\Documents\Y3 S2\DS 4200\hw1\images\cat2.jpg");
-  } else {
-    myImage.setAttribute("src", "C:\Users\ardem\OneDrive\Documents\Y3 S2\DS 4200\hw1\images\cat.jpg");
-  }
-};
-let myButton = document.querySelector("button");
+let myButton = document.querySelector("button1");
 let myHeading = document.querySelector("h1");
 function setUserName() {
   const myName = prompt("Please enter your name.");
@@ -16,15 +6,20 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem("name", myName);
-    myHeading.textContent = `Hey, ${myName}, look at my cat`;
+    myHeading.textContent = `Hey, ${myName}, I'm Alyssa!`;
   }
 }
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Hey, ${storedName}, look at my cat`;
+  myHeading.textContent = `Hey, ${storedName}, I'm Alyssa!`;
 }
 myButton.onclick = () => {
   setUserName();
 };
+const button = document.querySelector("button");
+
+button.addEventListener("click", (event) => {
+  button.textContent = `Click count: ${event.detail}`;
+});
