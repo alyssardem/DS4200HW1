@@ -1,0 +1,26 @@
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+h1 {
+  margin: 0;
+  font-size: 60px;
+  text-align: center;
+}
+
+p{
+  font-size: 30px;
+}
+li {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+html {
+  background-color: #fae8f8;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
